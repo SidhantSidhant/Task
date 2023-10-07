@@ -15,7 +15,6 @@ export class HeaderComponent extends NavbarComponent implements OnInit {
     super(apiervic)
     this.translate.addLangs(['en', 'ar']);
     this.translate.setDefaultLang('en');
-
   }
 
  override ngOnInit(): void {
@@ -23,12 +22,10 @@ export class HeaderComponent extends NavbarComponent implements OnInit {
 
   selectLangvage(): void {
     this.isSelectLang = !this.isSelectLang;
-   
     if (this.isSelectLang == true) {
       this.translate.use("en");
     } else {
       this.translate.use("ar")
-     
     }
   }
 }

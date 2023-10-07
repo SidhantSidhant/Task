@@ -3,6 +3,7 @@ import * as moment from 'moment';
 import { HeaderComponent } from '../header/header.component';
 import { FormComponent } from '../form/form.component';
 import { ApiService } from '../../service/api.service';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
@@ -11,22 +12,21 @@ import { ApiService } from '../../service/api.service';
 })
 export class NavbarComponent extends FormComponent implements OnInit {
   date !: string | Date;
+  time : any;
   morningMsg !: string;
+  $unsubscript : Subject<void> = new Subject<void>();
   constructor(public apiservice: ApiService) {
     super(apiservice)
    }
 
  override ngOnInit(): void {
-    setInterval(() => {
-      this.dateSetmomment();
-    }, 100)
+   this.dateSetmomment();
     this.dateTimepicker();
-
   }
 
   dateSetmomment(): void {
     const momentdate = moment();
-    this.date = moment().format('MMMM Do YYYY, h:mm:ss a') as string;
+     this.date = new Date();  
   }
 
   dateTimepicker(): void {

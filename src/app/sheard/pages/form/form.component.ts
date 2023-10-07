@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ApiService } from '../../service/api.service';
-import { Observable, Subject, Subscription } from 'rxjs';
+import { Observable, Subject, Subscription} from 'rxjs';
 import { Icriteria } from '../../service/user.interface';
 
 @Component({
@@ -11,7 +11,7 @@ import { Icriteria } from '../../service/user.interface';
 })
 export class FormComponent implements OnInit {
   form !: FormGroup;
-  takeUntil: Subject<void> = new Subject();
+  $takeUntil: Subject<void> = new Subject();
   tableArr: Icriteria[] = [];
 
   constructor(public apiService: ApiService) {}
@@ -33,12 +33,14 @@ export class FormComponent implements OnInit {
   }
 
   accountCriteriaformSubmit() {
-    this.apiService.updateData(this.form.value).subscribe((responsedata) => {
+    this.apiService.updateData(this.form.value).subscribe((responsedata : any) => {
       this.tableArr.push(responsedata)
       this.apiService.tableData.next(this.tableArr)
+    },(err)=>{
+       console.log(err);
     })
     this.form.reset();
-
   }
 
 }
+
