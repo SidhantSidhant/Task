@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-12">
+        <h6 class="bg-muted mb-0 p-3 font-weight-bold">
+            {{morningMsg }} &nbsp; <br> {{date}}
+        </h6>
+    </div>
+    <div class="col-12">
+        <accordion [closeOthers]="true" [isAnimated]="true">
+            <accordion-group>
+                <div accordion-heading style="width: 100%;">
+                    <span class="me-5"><i class="fa-solid fa-caret-right"></i></span> {{'administrative' | translate}}
+                </div>
+
+            </accordion-group>
+            <accordion-group>
+                <div accordion-heading>
+                    <span class="me-5"><i class="fa-solid fa-caret-right"></i></span>
+                    {{'privateWarehouses' | translate}}
+                </div>
+            </accordion-group>
+            <accordion-group>
+                <div accordion-heading> <span class="me-5"><i class="fa-solid fa-caret-right"></i></span>
+                    {{'sportEvent' | translate}}
+                </div>
+
+            </accordion-group>
+            <accordion-group>
+                <div accordion-heading><span class="me-5"><i class="fa-solid fa-caret-right"></i></span>
+                    {{'registration' | translate}}
+                </div>
+                <ul>
+                    <li class=""><a routerLink="">{{'account.accountM' | translate}}</a></li>
+                   <hr>
+                    <li><a routerLink="">{{"account.activeA" | translate}}</a></li>
+                        <hr>
+                    <li><a routerLink="">{{'account.userM' | translate}}</a></li>
+                    <hr>
+                    <li><a routerLink="/table">{{'account.approveCA' | translate}}</a></li>
+                    <hr>
+                    <li><a routerLink="">{{'account.approveCAgent' | translate}}</a></li>
+                    <hr>
+                    <li><a routerLink="">{{'account.resetPU' | translate}}</a></li>
+                    <hr>
+                    <li><a routerLink="">{{'account.printUser' | translate}}</a></li>
+                    <hr>
+                    <li><a routerLink="">{{'account.SearchingAeo' | translate}}</a></li>
+                    <hr>
+                    <li><a routerLink="">{{'account.createR' | translate}}</a></li>
+                   
+                </ul>
+
+            </accordion-group>
+            <accordion-group>
+                <div accordion-heading><span class="me-5"><i class="fa-solid fa-caret-right"></i></span>
+                    {{'cargomanifast' | translate}}
+                </div>
+
+            </accordion-group>
+            <accordion-group>
+                <div accordion-heading><span class="me-5"><i class="fa-solid fa-caret-right"></i></span>
+                    {{'detained' | translate}}
+                </div>
+
+            </accordion-group>
+            <accordion-group>
+                <div accordion-heading><span class="me-5"><i class="fa-solid fa-caret-right"></i></span>
+                    {{'declarations' | translate}}
+                </div>
+
+            </accordion-group>
+        </accordion>
+    </div>
+</div>

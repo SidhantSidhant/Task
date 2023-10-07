@@ -1,0 +1,27 @@
+
+
+{
+    "contact":"اتصل بنا",
+    "home" : "بيت",
+    "logOut" : "تسجيل خروج",
+    "administrative" : "إداري",
+    "privateWarehouses" : "المستودعات الخاصة",
+    "sportEvent" : "الرياضة والحدث",
+    "registration" : "تسجيل",
+    "cargomanifast" : "بيان البضائع",
+    "detained" :"البضائع المحتجزة",
+    "declarations" : "تصريحات",
+    "account": {
+        "accountM" : "إدارة الحساب",
+        "activeA": "حساب نشط",
+        "userM": "إدارةالمستخدم",
+        "approveCA" : "الموافقة على وكالة المقاصة",
+        "approveCAgent" : "الموافقة على وكيل المقاصة",
+        "resetPU" : "إعادة تعيين كلمة المرور/فتح المستخدم",
+        "printUser" : "طباعة بطاقة هوية المستخدم",
+        "SearchingAeo" : "البحث عن تجار",
+        "createR" : "إنشاء طلب"
+    },
+    "searchCirteria" : "معايير البحث",
+    "approveClining" : "الموافقة على وكالة التنظيف"
+  }

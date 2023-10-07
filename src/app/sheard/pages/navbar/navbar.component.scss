@@ -1,0 +1,22 @@
+ul {
+  list-style-type: square;
+  margin-bottom: 0 !important;
+}
+
+li::marker {
+  color: rgb(255, 165, 0, .6);
+  font-size: 1rem;
+  border-radius: 10%;
+}
+
+hr {
+  margin: 6px -16px 10px -3rem;
+  color: inherit;
+  border: 0;
+  border-top:2px  dotted black;
+  opacity: 0.25;
+}
+
+::ng-deep .panel-collapse.collapse.in.show {
+  background-color: rgb(239, 202, 133, .3) !important;
+}

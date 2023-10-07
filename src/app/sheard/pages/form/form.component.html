@@ -1,0 +1,123 @@
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOoq38eK13iCzRJ_XNt5U6lMZLV3Hyq78pbg&usqp=CAU" class="w-100" alt="">
+
+<div class="p-3">
+    <h3 class="bg-muted mb-0 ">{{'approveClining' | translate}}</h3>
+<mat-card>
+    <mat-card-content>
+        <h4>{{'searchCirteria' | translate}}</h4>
+        <hr>
+        <form [formGroup]="form" (ngSubmit)="accountCriteriaformSubmit()">
+            <div class="row">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4  ">
+                    <div class="row">
+                        <div class="col-md-3 ">
+                            <span>{{'CR Number' | translate}}</span>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="crnumber">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span>Status</span>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-select" aria-label="Default select example" formControlName="status">
+                                <option value="" selected disabled hidden>-- Select One --</option>
+                                <option value="pending">Pending Approval</option>
+                                <option value="pending">Reject Approval</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4  ">
+                    <div class="row">
+                        <div class="col-md-3 ">
+                            <span>Agency Name</span>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="agencyname">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4  ">
+                    <div class="row">
+                        <div class="col-md-3 ">
+                            <span>Establishment Id</span>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="establishmentid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4  ">
+                    <div class="row">
+                        <div class="col-md-3 ">
+                            <span>Creation Date From</span>
+                        </div>
+                        <div class="col-md-8">
+                            <mat-form-field appearance="fill" class="d-block">
+                                <input matInput [matDatepicker]="dp1" formControlName="dateCreationForm">
+                                <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
+                                <mat-datepicker #dp1></mat-datepicker>
+                              </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4  ">
+                    <div class="row">
+                        <div class="col-md-3 ">
+                            <span>Creation Date to</span>
+                        </div>
+                        <div class="col-md-8">
+                            <mat-form-field appearance="fill" class="d-block">
+                                <input matInput [matDatepicker]="dp3"  formControlName="dateCreationTo">
+                                <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
+                                <mat-datepicker #dp3 disabled="false"></mat-datepicker>
+                              </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4">
+                    <div class="row">
+                        <div class="col-md-3 ">
+                            <span>Clearing Agency Type</span>
+                        </div>
+                        <div class="col-md-8">
+                            <select class="form-select" aria-label="Default select example"
+                                formControlName="agencytype">
+                                <option value="" selected disabled hidden>-- ALL --</option>
+                                <option value="goverment">Goverment</option>
+                                <option value="private">Private</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 mb-4 bg-muted p-2">
+                    <div class="">
+                        <button mat-raised-button class="me-3" type="submit">Search</button>
+                        <button mat-raised-button type="button" (click)="form.reset()">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>
+</div>
+
+<app-table [tableArr]="tableArr"></app-table>

@@ -1,0 +1,54 @@
+
+<div class="mat-elevation-z8 d-none d-md-block">
+  <table mat-table [dataSource]="dataSource">
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="sr">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element;let index = index;"> {{index + 1}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="establishmentid">
+      <th mat-header-cell *matHeaderCellDef> <strong class="text-uppercase"> establishment Id</strong>  </th>
+      <td mat-cell *matCellDef="let element"> {{element.establishmentid}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="crnumber">
+      <th mat-header-cell *matHeaderCellDef> <strong class="text-uppercase">CR number</strong> </th>
+      <td mat-cell *matCellDef="let element"> {{element.crnumber}} </td>
+    </ng-container>
+
+    
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="status">
+      <th mat-header-cell *matHeaderCellDef> <strong class="text-uppercase">status</strong> </th>
+      <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+  
+
+    <ng-container matColumnDef="dateCreationForm">
+      <th mat-header-cell *matHeaderCellDef> <strong class="text-uppercase">Creation Date</strong> </th>
+      <td mat-cell *matCellDef="let element"> {{element.dateCreationForm}} </td>
+    </ng-container>
+
+    <!-- <ng-container matColumnDef="dateCreationTo">
+      <th mat-header-cell *matHeaderCellDef> formnameto </th>
+      <td mat-cell *matCellDef="let element"> {{element.dateCreationTo}} </td>
+    </ng-container> -->
+
+    <ng-container matColumnDef="agencytype">
+      <th mat-header-cell *matHeaderCellDef> <strong clas="text-uppercase">Agency type</strong> </th>
+      <td mat-cell *matCellDef="let element"> {{element.agencytype}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons 
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
+</div>

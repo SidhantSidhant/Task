@@ -1,0 +1,26 @@
+
+{
+    "Contact" : "contact us",
+    "home" : "HOME",
+    "logOut" : "LogOut",
+    "administrative" : "Systen Administrative",
+    "privateWarehouses" : "Private warehouses",
+    "sportEvent" : "sport and Event",
+    "registration" : "Registration",
+    "cargomanifast" : "Cargo manifast",
+    "detained" :"Detained Goods",
+    "declarations" : "Declarations",
+    "account": {
+        "accountM" : "account mangemnent",
+        "activeA": "Active Account",
+        "userM": "User mangemnent",
+        "approveCA" : "Approve Clearing Agency",
+        "approveCAgent" : "Approve Clearing Agent",
+        "resetPU" : "Reset password/Unlock User",
+        "printUser" : "Print User Id Card",
+        "SearchingAeo" : "Searching For AEO traders",
+        "createR" : "Create Request"
+    }, 
+    "searchCirteria" : "Search Cirteria",
+    "approveClining" : "Approve Clining Agency"
+ }

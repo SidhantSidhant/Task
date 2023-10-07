@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+/* Importing Datepicker SCSS file. */
+@import "~ngx-bootstrap/datepicker/bs-datepicker";
+
+a{
+ text-decoration: none;
+ color : black;
+}
+
+.navbar-selector{
+    flex-basis: 35%;
+    flex-grow: 0;
+}
+
+.router{
+    // width: 100%;
+    flex-basis: 100%;
+    // background-color: black;
+}
+
+.bg-muted{
+    background-color:rgb(128, 128, 128, .5);
+    font-size:1rem !important;
+}
+
+.navbarSection{
+    h3{
+        border-top-right-radius : 10px;
+        border-top-left-radius : 10px;
+        padding-left : 1rem;
+        color : white;
+    }
+}
