@@ -4,6 +4,7 @@ import { HeaderComponent } from '../header/header.component';
 import { FormComponent } from '../form/form.component';
 import { ApiService } from '../../service/api.service';
 import { Subject } from 'rxjs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -15,7 +16,7 @@ export class NavbarComponent extends FormComponent implements OnInit {
   time : any;
   morningMsg !: string;
   $unsubscript : Subject<void> = new Subject<void>();
-  constructor(public apiservice: ApiService) {
+  constructor(public apiservice: ApiService,) {
     super(apiservice)
    }
 
@@ -46,4 +47,7 @@ export class NavbarComponent extends FormComponent implements OnInit {
 
   }
 
+  tables() : void{
+
+  }
 }

@@ -22,5 +22,20 @@
         "createR" : "Create Request"
     }, 
     "searchCirteria" : "Search Cirteria",
-    "approveClining" : "Approve Clining Agency"
+    "approveClining" : "Approve Clining Agency",
+    "cRNumber" : "CR Number",
+    "status" : "Status",
+    "agencyName" : "Agency Name",
+    "establishmentId" : "Establishment Id",
+    "creationDate" :"Creation Date From",
+    "creationDateto" : "Creation Date to",
+    "clearingAgencyType" : "Clearing Agency Type",
+    "search" : "Search",
+    "reset" : "Reset",
+    "ALL" : "-- ALL --",
+    "goverment" : "Goverment",
+    "private" : "Private",
+    "selectOne" : "-- Select One --",
+    "pendingApproval" : "Pending Approval",
+    "rejectApproval" : "Reject Approval"
  }

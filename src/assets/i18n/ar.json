@@ -23,5 +23,20 @@
         "createR" : "إنشاء طلب"
     },
     "searchCirteria" : "معايير البحث",
-    "approveClining" : "الموافقة على وكالة التنظيف"
+    "approveClining" : "الموافقة على وكالة التنظيف",
+    "cRNumber" : "رقم السجل التجاري",
+    "status" : "حالة",
+    "agencyName" : "اسم الوكالة",
+    "establishmentId" : "معرف المنشأة",
+    "creationDate" :"تاريخ الإنشاء من",
+    "creationDateto" : "تاريخ الإنشاء إلى",
+    "clearingAgencyType" : "نوع وكالة المقاصة",
+    "search" : "يبحث",
+    "reset" : "إعادة ضبط",
+    "ALL" : "-- الجميع --",
+    "goverment" : "الحكومة",
+    "private" : "خاص",
+    "selectOne" : "-- اختر واحدة --",
+    "pendingApproval" : "ما زال يحتاج بتصدير",
+    "rejectApproval" : "رفض الموافقة"
   }

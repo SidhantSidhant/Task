@@ -14,6 +14,7 @@ import { FormComponent } from './sheard/pages/form/form.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { DashbordComponent } from './sheard/pages/dashbord/dashbord.component';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     NavbarComponent,
     TableComponent,
     FormComponent,
+    DashbordComponent,
     
   ],
   imports: [
