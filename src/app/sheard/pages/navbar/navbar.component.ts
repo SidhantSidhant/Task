@@ -35,7 +35,6 @@ export class NavbarComponent extends FormComponent implements OnInit {
     const dateTime: any = dateTimepicker.getHours();
     const dateMin = dateTimepicker.getMinutes();
     const datesec = dateTimepicker.getSeconds();
-    // this.time = `${dateTime}:${dateMin}:${datesec}`
     if (dateTime >= 6 && dateTime < 12) {
       this.morningMsg = "Good morning";
     } else if (dateTime >= 12 && dateTime < 17) {

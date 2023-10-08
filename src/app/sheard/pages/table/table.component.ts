@@ -11,25 +11,25 @@ import { Subscription } from 'rxjs';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })
-export class TableComponent implements OnInit,OnDestroy {
+export class TableComponent implements OnInit, OnDestroy {
   @Input() tableArr !: Icriteria[];
-  displayedColumns: string[] = ['sr', 'establishmentid', 'crnumber', 'customCode' ,'status', 'dateCreationForm', 'agencytype'];
+  displayedColumns: string[] = ['sr', 'establishmentid', 'crnumber', 'customCode', 'status', 'dateCreationForm', 'agencytype'];
   dataSource = new MatTableDataSource<Icriteria>();
- subscription$1 !: Subscription;
- subscription$2 !: Subscription;
+  subscription$1 !: Subscription;
+  subscription$2 !: Subscription;
   constructor(private apiservice: ApiService) { }
 
   ngOnInit(): void {
-   this.subscription$1 = this.apiservice.tableData.subscribe((tableData)=>{
+    this.subscription$1 = this.apiservice.tableData.subscribe((tableData) => {
       this.dataSource.data = tableData;
       this.tableArr = tableData;
-    },(err)=>{
+    }, (err) => {
       alert("throw table data Error")
     })
-    
-   this.subscription$2 = this.apiservice.fetchCliningAgencyData().subscribe((response: any) => {
+
+    this.subscription$2 = this.apiservice.fetchCliningAgencyData().subscribe((response: any) => {
       this.dataSource.data = response;
-    }, (err)=>{
+    }, (err) => {
       alert(`${JSON.stringify(err)}`)
     })
   }

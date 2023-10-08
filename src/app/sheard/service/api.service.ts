@@ -8,17 +8,17 @@ import { Icriteria } from './user.interface';
   providedIn: 'root'
 })
 export class ApiService {
-  jsondata : string = "http://localhost:3000/posts";
-  tableData : Subject<Icriteria[]> = new Subject(); 
+  jsondata: string = "http://localhost:3000/posts";
+  tableData: Subject<Icriteria[]> = new Subject();
 
-  constructor( private _http : HttpClient) { }
+  constructor(private _http: HttpClient) { }
 
-  fetchCliningAgencyData() : Observable<Icriteria>{
+  fetchCliningAgencyData(): Observable<Icriteria> {
     return this._http.get<Icriteria>(this.jsondata)
   }
 
-  createCliningAgencyData(data : Icriteria) : Observable<Icriteria>{
-    return  this._http.post<Icriteria>(this.jsondata, data)
+  createCliningAgencyData(data: Icriteria): Observable<Icriteria> {
+    return this._http.post<Icriteria>(this.jsondata, data)
   }
- 
+
 }
