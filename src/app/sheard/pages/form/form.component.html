@@ -65,11 +65,26 @@
                 <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4  ">
                     <div class="row">
                         <div class="col-md-3 ">
+                            <span>Custom code</span>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="customCode">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                &nbsp;
+                
+
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-4  ">
+                    <div class="row">
+                        <div class="col-md-3 ">
                             <span>{{'creationDate' | translate}}</span>
                         </div>
                         <div class="col-md-8">
                             <mat-form-field appearance="fill" class="d-block">
-                                <input matInput [matDatepicker]="dp1" formControlName="dateCreationForm">
+                                <input matInput [matDatepicker]="dp1"  (dateChange)="updateDOB($event, 'dateCreation')">
                                 <mat-datepicker-toggle matSuffix [for]="dp1"></mat-datepicker-toggle>
                                 <mat-datepicker #dp1></mat-datepicker>
                               </mat-form-field>
@@ -84,7 +99,7 @@
                         </div>
                         <div class="col-md-8">
                             <mat-form-field appearance="fill" class="d-block">
-                                <input matInput [matDatepicker]="dp3"  formControlName="dateCreationTo">
+                                <input matInput [matDatepicker]="dp3" (dateChanges)="updateDOB($event, 'dateCreationto')" >
                                 <mat-datepicker-toggle matSuffix [for]="dp3"></mat-datepicker-toggle>
                                 <mat-datepicker #dp3 disabled="false"></mat-datepicker>
                               </mat-form-field>
@@ -100,7 +115,7 @@
                         <div class="col-md-8">
                             <select class="form-select" aria-label="Default select example"
                                 formControlName="agencytype">
-                                <option value="" selected disabled hidden>{{'ALL' | translate}}</option>
+                                <option value="" selected >{{'ALL' | translate}}</option>
                                 <option value="goverment">{{'goverment' | translate}}</option>
                                 <option value="private">{{'private' | translate}}</option>
                             </select>

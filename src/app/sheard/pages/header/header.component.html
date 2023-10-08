@@ -1,15 +1,16 @@
-  <nav class="navbar navbar-expand-lg navbar-light bg-red">
-    <div class="container-fluid">
-      <button mat-raised-button (click)="selectLangvage()">Translate</button>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link active" aria-current="page" routerLink="/">{{"home" | translate}}</a>
-          <a class="nav-link" href="#">{{"contact" | translate}}</a>
-          <a class="nav-link" href="#">{{'logOut' | translate}}</a>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-red">
+  <div class="container-fluid">
+    <button mat-raised-button (click)="selectLangvage()">Translate</button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-auto">
+        <a class="nav-link "  routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{exact : true}">{{"home" | translate}}</a>
+        <a class="nav-link" routerLinkActive="active" routerLink="/contact" >{{"contact" | translate}}</a>
+        <a class="nav-link" >{{'logOut' | translate}}</a>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>

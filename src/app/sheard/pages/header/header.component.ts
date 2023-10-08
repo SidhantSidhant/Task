@@ -10,14 +10,14 @@ import { ApiService } from '../../service/api.service';
 })
 export class HeaderComponent extends NavbarComponent implements OnInit {
   isSelectLang: boolean = true;
-  
+
   constructor(public translate: TranslateService, public apiervic: ApiService) {
     super(apiervic)
     this.translate.addLangs(['en', 'ar']);
     this.translate.setDefaultLang('en');
   }
 
- override ngOnInit(): void {
+  override ngOnInit(): void {
   }
 
   selectLangvage(): void {

@@ -9,6 +9,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* Importing Datepicker SCSS file. */
 @import "~ngx-bootstrap/datepicker/bs-datepicker";
 
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+    color: rgb(255, 255, 0, .6);
+}
+
 a{
  text-decoration: none;
  color : black;

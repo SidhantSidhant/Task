@@ -13,11 +13,11 @@ export class ApiService {
 
   constructor( private _http : HttpClient) { }
 
-  fetchData() : Observable<Icriteria>{
+  fetchCliningAgencyData() : Observable<Icriteria>{
     return this._http.get<Icriteria>(this.jsondata)
   }
 
-  updateData(data : Icriteria) : Observable<Icriteria>{
+  createCliningAgencyData(data : Icriteria) : Observable<Icriteria>{
     return  this._http.post<Icriteria>(this.jsondata, data)
   }
  

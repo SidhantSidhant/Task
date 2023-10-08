@@ -15,6 +15,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { DashbordComponent } from './sheard/pages/dashbord/dashbord.component';
+import { ContactComponent } from './sheard/pages/contact/contact.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { DashbordComponent } from './sheard/pages/dashbord/dashbord.component';
     TableComponent,
     FormComponent,
     DashbordComponent,
+    ContactComponent,
     
   ],
   imports: [

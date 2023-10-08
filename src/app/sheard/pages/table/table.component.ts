@@ -1,8 +1,9 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Icriteria } from '../../service/user.interface';
 import { ApiService } from '../../service/api.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
+import { Subscription } from 'rxjs';
 
 
 @Component({
@@ -10,25 +11,26 @@ import { MatPaginator } from '@angular/material/paginator';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss']
 })
-export class TableComponent implements OnInit {
+export class TableComponent implements OnInit,OnDestroy {
   @Input() tableArr !: Icriteria[];
-  displayedColumns: string[] = ['sr', 'establishmentid', 'crnumber', 'status', 'dateCreationForm', 'agencytype'];
+  displayedColumns: string[] = ['sr', 'establishmentid', 'crnumber', 'customCode' ,'status', 'dateCreationForm', 'agencytype'];
   dataSource = new MatTableDataSource<Icriteria>();
-
+ subscription$1 !: Subscription;
+ subscription$2 !: Subscription;
   constructor(private apiservice: ApiService) { }
 
   ngOnInit(): void {
-    // this.dataSource.data = this.tableArr;
-    this.apiservice.tableData.subscribe((tableData)=>{
+   this.subscription$1 = this.apiservice.tableData.subscribe((tableData)=>{
       this.dataSource.data = tableData;
+      this.tableArr = tableData;
     },(err)=>{
       alert("throw table data Error")
     })
     
-    this.apiservice.fetchData().subscribe((response: any) => {
+   this.subscription$2 = this.apiservice.fetchCliningAgencyData().subscribe((response: any) => {
       this.dataSource.data = response;
     }, (err)=>{
-      alert(`${err}`)
+      alert(`${JSON.stringify(err)}`)
     })
   }
 
@@ -38,4 +40,8 @@ export class TableComponent implements OnInit {
     // this.dataSource.paginator = this.tableArr;
   }
 
+  ngOnDestroy(): void {
+    this.subscription$1.unsubscribe();
+    this.subscription$2.unsubscribe();
+  }
 }

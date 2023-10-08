@@ -1,7 +1,7 @@
 
 {
-    "Contact" : "contact us",
-    "home" : "HOME",
+    "contact" : "contact us",
+    "home" : "Home",
     "logOut" : "LogOut",
     "administrative" : "Systen Administrative",
     "privateWarehouses" : "Private warehouses",

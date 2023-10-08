@@ -13,21 +13,21 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class NavbarComponent extends FormComponent implements OnInit {
   date !: string | Date;
-  time : any;
+  time: any;
   morningMsg !: string;
-  $unsubscript : Subject<void> = new Subject<void>();
+  $unsubscript: Subject<void> = new Subject<void>();
   constructor(public apiservice: ApiService,) {
     super(apiservice)
-   }
+  }
 
- override ngOnInit(): void {
-   this.dateSetmomment();
+  override ngOnInit(): void {
+    this.dateSetmomment();
     this.dateTimepicker();
   }
 
   dateSetmomment(): void {
     const momentdate = moment();
-     this.date = new Date();  
+    this.date = new Date();
   }
 
   dateTimepicker(): void {
@@ -35,6 +35,7 @@ export class NavbarComponent extends FormComponent implements OnInit {
     const dateTime: any = dateTimepicker.getHours();
     const dateMin = dateTimepicker.getMinutes();
     const datesec = dateTimepicker.getSeconds();
+    // this.time = `${dateTime}:${dateMin}:${datesec}`
     if (dateTime >= 6 && dateTime < 12) {
       this.morningMsg = "Good morning";
     } else if (dateTime >= 12 && dateTime < 17) {
@@ -44,10 +45,6 @@ export class NavbarComponent extends FormComponent implements OnInit {
     } else {
       this.morningMsg = "Good night";
     }
-
   }
 
-  tables() : void{
-
-  }
 }
